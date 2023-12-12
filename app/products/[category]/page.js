@@ -1,14 +1,14 @@
-import ProductCard from "@/components/products/ProductCard.js"
-import { mockData } from "@/data/products.js"
+import ProductList from "@/components/products/ProductList.js"
+import { Suspense } from "react"
 
-const Products = () => {
+const Products = ({params}) => {
+    const {category} = params
+
     return (
-        <div className="flex flex-wrap justify-center gap-10 w-8/12 m-auto">
-            {
-                mockData.map(item =>
-                    <ProductCard item={item}/>
-                )
-            }
+        <div>
+            <Suspense fallback={<div className="h-96 flex justify-center items-center">Cargando productos...</div>}>
+                <ProductList category={category}/>
+            </Suspense>
         </div>
     )
 }
