@@ -1,9 +1,8 @@
-import Counter from "@/components/Counter.js"
+import Counter from "../ui/Counter.js"
 import Image from "next/image.js"
 import Link from "next/link.js"
 
 const ProductDetail = ({item}) => {
-
     return (
         <div className="flex mt-10 flex-col">
             <Link href='/products/all' className="text-blue-500 m-auto">Volver al catálogo</Link>
