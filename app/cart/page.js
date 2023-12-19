@@ -27,7 +27,7 @@ const Cart = () => {
                 <span>El carrito está vacío</span>
                 :
                 cart.map(item => 
-                <ProductCart increase={increase} decrease={decrease} deleteItem={deleteItem} item={item}/>
+                <ProductCart key={item.slug} increase={increase} decrease={decrease} deleteItem={deleteItem} item={item}/>
             )}
             <>
             {
